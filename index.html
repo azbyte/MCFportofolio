@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portfolio - Natural & Event Photography</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: #f5f7fa;
+    color: #1f2937;
+  }
+  h1, h2 {
+    font-weight: 900;
+  }
+  
+
+  /* Hover effect for images */
+  img {
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+  }
+  img:hover {
+    position: relative;
+    z-index: 10;
+    transform: scale(1.2);
+    object-fit: contain;
+  }
+  /* Hover effect for intro banner image */
+  section.mb-16 img:hover {
+    object-fit: contain !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  /* Disable hover effect on profile image */
+  img.rounded-full {
+    pointer-events: none;
+  }
+  /* Samakan ukuran gambar di Event Highlights */
+  #event img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+  }
+</style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+<header class="shadow-md" style="background: url('image/bacground profil.png') no-repeat center center; background-size: cover;">
+  <div class="w-full mx-0 px-0 py-6 flex flex-col md:flex-row md:justify-between md:items-center">
+    <div class="flex items-center space-x-4 ml-24">
+      <img src="image/profil.jpg" alt="Foto profil dengan latar belakang hijau dan wajah tersenyum" class="rounded-full"/>
+      <h1 class="text-3xl text-white tracking-wide font-extrabold">My Portfolio</h1>
+    </div>
+    <nav role="navigation" class="mt-4 md:mt-0 space-x-6 text-green-200 font-semibold md:flex md:justify-center md:flex-1">
+      <a href="#event" class="hover:text-white transition">Events</a>
+      <a href="#nature" class="hover:text-white transition">Nature Shots</a>
+      <!-- Removed Conceptual link as section is commented out -->
+      <a href="#contact" class="hover:text-white transition">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="flex-grow max-w-7xl mx-auto px-6 py-10">
+
+  <!-- Intro Banner -->
+  <section class="mb-16 rounded-lg shadow-lg overflow-hidden relative">
+<img src="image/spanduk.jpg" alt="Spanduk pemandangan alam dengan ladang dan pepohonan di bawah langit berawan" 
+      class="w-full h-52 object-contain object-center brightness-75" loading="lazy"/>
+    <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-green-900/90 via-green-900/70 to-green-900/90 backdrop-blur-sm">
+      <div class="p-8 rounded-lg text-center max-w-3xl mx-auto">
+        <h2 class="text-4xl text-white font-extrabold mb-3 tracking-wider">Exploring Nature and Life Through My Lens</h2>
+        <p class="text-green-200 text-lg max-w-xl leading-relaxed">A curated collection of photography capturing the vibrant essence of natural landscapes, serene sunsets, heartfelt moments, and creative concepts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paflet Event -->
+  <section id="nature" class="mb-20">
+    <h2 class="text-3xl text-green-800 border-b-4 border-green-600 inline-block mb-8">Nature Photography</h2>
+    <div class="space-y-10">
+      <div class="grid gap-6 md:grid-cols-2">
+        <div>
+<img src="image/pamflet.png" alt="Sawah hijau luas dengan jalan setapak dan pepohonan di bawah langit berawan" 
+            class="rounded-lg shadow-lg object-cover w-full h-80" loading="lazy"/>
+          <!-- <h3 class="mt-3 text-xl font-semibold text-green-900">pamflet 1</h3> -->
+          <!-- <p class="text-gray-700">Vibrant rice terraces glowing with afternoon sunlight under a dynamic sky. A testament to nature’s nurturing charm and changing light.</p> -->
+        </div>
+        <div>
+<img src="image/foto2.png" alt="Close-up daun pohon hijau cerah dengan latar langit biru cerah" 
+            class="rounded-lg shadow-lg object-cover w-full h-80" loading="lazy"/>
+          <!-- <h3 class="mt-3 text-xl font-semibold text-green-900">pamflet 2</h3> -->
+          <!-- <p class="text-gray-700">A close perspective of tree leaves glowing golden from sunlight, contrasting against a vibrant blue sky, embodying tranquility and natural vibrance.</p> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Photography Section -->
+  <section id="event" class="mb-20">
+    <h2 class="text-3xl text-green-800 border-b-4 border-green-600 inline-block mb-8">Rice Fields</h2>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <article class="overflow-hidden rounded-lg bg-white shadow-md hover:shadow-lg transition relative">
+<img src="image/IMG-20250715-WA0008.jpg" alt="Matahari terbenam keemasan melalui gerbang besi hitam dengan pepohonan di latar belakang" 
+          class="w-full h-80 object-cover" loading="lazy"/>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-green-900 mb-2">Endless Green Serenity</h3>
+          <p class="text-gray-700">The rice fields stretch endlessly, shimmering under the golden sunlight. Gentle breezes ripple through the green stalks, creating waves across the land. Farmers move slowly, tending to their crops with care. It’s a peaceful landscape, rich with tradition and quiet beauty.</p>
+        </div>
+      </article>
+      <article class="overflow-hidden rounded-lg bg-white shadow-md hover:shadow-lg transition relative">
+<img src="image/IMG-20250715-WA0001.jpg" alt="Matahari terbenam keemasan melalui gerbang besi hitam dengan pepohonan di latar belakang" 
+          class="w-full h-80 object-cover" loading="lazy"/>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-green-900 mb-2">Harmony in the Countryside</h3>
+          <p class="text-gray-700">Lush rice paddies blanket the countryside, divided by narrow footpaths and irrigation channels. The scent of fresh earth fills the air, and distant hills frame the scene. This timeless setting reflects a harmony between people and nature, preserved through generations.</p>
+        </div>
+      </article>
+      <article class="overflow-hidden rounded-lg bg-white shadow-md hover:shadow-lg transition relative">
+<img src="image/IMG-20250715-WA0002.jpg" alt="Minuman hitam putih dengan hiasan daun semanggi empat daun di sedotan" 
+          class="w-full h-72 object-cover" loading="lazy"/>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-green-900 mb-2">Terraces of Tranquility</h3>
+          <p class="text-gray-700">Terraced rice fields cascade down the hillsides, forming graceful patterns of green. Water glistens in the paddies, mirroring the sky above. Amid this serene environment, the rhythm of rural life continues, marked by planting, harvesting, and quiet moments of reflection.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Nature Photography Section -->
+  <section id="nature" class="mb-20">
+    <h2 class="text-3xl text-green-800 border-b-4 border-green-600 inline-block mb-8">Nature Photography</h2>
+    <div class="space-y-10">
+      <div class="grid gap-6 md:grid-cols-2">
+        <div>
+<img src="image/IMG-20250715-WA0003.jpg" alt="Sawah hijau luas dengan jalan setapak dan pepohonan di bawah langit berawan" 
+            class="rounded-lg shadow-lg object-cover w-full h-80" loading="lazy"/>
+          <h3 class="mt-3 text-xl font-semibold text-green-900">Sunlit Canopy</h3>
+          <p class="text-gray-700">A view from beneath the trees, capturing the bright sunlight piercing through the vibrant green leaves. The heart-shaped foliage creates a lively dance of shadows and light against a clear blue sky, evoking a feeling of peace and connection with nature.</p>
+        </div>
+        <div>
+<img src="image/IMG-20250715-WA0007.jpg" alt="Close-up daun pohon hijau cerah dengan latar langit biru cerah" 
+            class="rounded-lg shadow-lg object-cover w-full h-80" loading="lazy"/>
+          <h3 class="mt-3 text-xl font-semibold text-green-900">Paper Petal Message</h3>
+          <p class="text-gray-700">A handmade clover crafted from lined paper, perched on a plastic straw inside a drink cup. Though in black and white, the image radiates warmth and personal sentiment, as handwritten words peek through the delicate flower-like shape, symbolizing a quiet moment of creativity and thoughtfulness.</p>
+        </div>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+<img src="image/IMG-20250715-WA0005.jpg" alt="Matahari terbenam emas dengan awan merah muda dan oranye di balik siluet pepohonan" class="rounded-lg shadow-md object-cover w-full h-60" loading="lazy"/>
+<img src="image/IMG-20250715-WA0006.jpg" alt="Matahari terbenam di pantai dengan ombak dan langit yang menggelap" class="rounded-lg shadow-md object-cover w-full h-60" loading="lazy"/>
+<img src="image/IMG-20250715-WA0004.jpg" alt="Siluet pohon tinggi saat matahari terbenam dengan langit pastel lembut" class="rounded-lg shadow-md object-cover w-full h-60" loading="lazy"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conceptual & Creative Section -->
+  <!-- <section id="concept" class="mb-20">
+    <h2 class="text-3xl text-green-800 border-b-4 border-green-600 inline-block mb-8">Conceptual & Creative Works</h2>
+    <p class="mb-8 max-w-3xl text-gray-800 leading-relaxed">
+      This section explores creative expressions combining photography and hand-made art elements, blending imagination with real-life scenes to suggest themes of hope, luck, and connectedness.
+    </p>
+    <div class="grid gap-8 md:grid-cols-2">
+      <article class="overflow-hidden rounded-lg bg-white shadow-md hover:shadow-lg transition relative">
+        <img src="image/IMG-20250715-WA0002.jpg" alt="Konsep hitam putih daun semanggi empat daun di sedotan pada gelas dengan latar buram" 
+          class="object-cover w-full h-56"/>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-green-900 mb-2">Handmade Clover Art</h3>
+          <p class="text-gray-700">Combining black & white imagery with an artistic representation of luck, this photo evokes a calm and thoughtful mood.</p>
+        </div>
+      </article>
+      <article class="overflow-hidden rounded-lg bg-white shadow-md hover:shadow-lg transition relative">
+        <img src="image/pamflet.png" alt="Poster vintage coklat untuk acara Mansa Campus Fair dengan ilustrasi pohon dan daun" 
+          class="object-contain w-full h-56 p-6 bg-green-50"/>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-green-900 mb-2">Vintage Event Poster</h3>
+          <p class="text-gray-700">Designed using muted earth tones and nature-inspired motifs, this poster invites visitors to celebrate community and nature at the campus fair.</p>
+        </div>
+      </article>
+    </div>
+  </section> -->
+
+</main>
+
+<footer id="contact" class="bg-green-900 text-green-100 text-center py-8">
+  <p class="mb-3 font-semibold text-lg">Contact Me</p>
+  <p class="max-w-md mx-auto mb-4">Reach out for collaborations, commissions, or inquiries about prints and projects. I'd love to hear from you.</p>
+  <a href="mailto:portfolio@example.com" class="inline-block bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-6 rounded shadow transition">Email Me</a>
+  <p class="mt-6 text-sm opacity-75">© 2025 My Portfolio. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
